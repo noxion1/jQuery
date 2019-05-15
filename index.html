@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <link  href="https://unpkg.com/nanogallery2@2.4.2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script  type="text/javascript" src="https://unpkg.com/nanogallery2@2.4.2/dist/jquery.nanogallery2.min.js"></script>
   </head>
   <body lang="nl">
     <h1>Perk A Cola's</h1>
@@ -43,6 +45,26 @@
           <figcaption>You can take multiple hits before going down</figcaption>
         </figure>
       </section>
+      <br>
+    <div id="nanogallery2">gallery_made_with_nanogallery2</div>
+
+    <script>
+       jQuery(document).ready(function () {
+          jQuery("#nanogallery2").nanogallery2( {
+              // ### gallery settings ###
+              thumbnailHeight:  150,
+              thumbnailWidth:   150,
+              itemsBaseURL:     'https://nanogallery2.nanostudio.org/samples/',
+
+              // ### gallery content ###
+              items: [
+                  { src: 'berlin1.jpg', srct: 'berlin1_t.jpg', title: 'Berlin 1' },
+                  { src: 'berlin2.jpg', srct: 'berlin2_t.jpg', title: 'Berlin 2' },
+                  { src: 'berlin3.jpg', srct: 'berlin3_t.jpg', title: 'Berlin 3' }
+                ]
+            });
+        });
+    </script>
 
     </main>
     <footer>
